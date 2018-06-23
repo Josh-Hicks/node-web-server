@@ -35,16 +35,22 @@ hbs.registerPartials(__dirname + '/views/partials')
 app.set('view enging', 'hbs')
 
 // routes
-app.get('/', (req, res, next) => {
+app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Home Page',
         welcomeMessage: 'Hello there!',
     })
 })
 
-app.get('/about', (req, res, next) => {
+app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTitle: 'About Page',
+    })
+})
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page'
     })
 })
 
